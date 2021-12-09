@@ -1,0 +1,300 @@
+/* public */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background : #fff;
+    --primary-color : #1DA1F2;
+    --primary-text : #0F1419;
+    --second-text : #5B7083;
+    --aside-background : #EBEEF0;
+    --section : rgba(0, 0, 0, 0.03);
+    --border-color : rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    background-color: var(--background);
+    color: var(--primary-text);
+    padding: 0 102px;
+    display: flex;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mr {
+    margin-right: 12px;
+}
+
+.second {
+    color: var(--second-text);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    border: none;
+    border-radius: 24px;
+    background-color: var(--primary-color);
+    color: var(--background);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+}
+
+.tweet {
+    width: 225px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar > img{
+    width: 50px;
+}
+/* nav */
+nav {
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    position: fixed;
+    width: 352px;
+}
+
+nav .links .logo {
+    padding: 6px;
+}
+
+nav .links ul li {
+    padding: 12px;
+    margin: 8px 0;
+}
+
+nav .links ul li > img {
+    margin-right: 12px;
+}
+
+nav .links ul li p {
+    cursor: pointer;
+}
+
+nav .profile {
+    padding: 12px;
+
+}
+
+nav .profile .user-infos {
+    justify-content: space-between;
+    width: 60%;
+}
+
+/* main */
+main {
+    width: 50%;
+    border: solid 1px var(--border-color);
+    margin-left: 25%;
+}
+
+main header {
+    padding: 16px;
+    justify-content: space-between;
+}
+
+main .write-tweet {
+    padding: 6px 16px;
+    border-top: solid 1px var(--border-color);
+    border-bottom: solid 1px var(--border-color);
+}
+
+main .input-group {
+    width: 100%;
+    padding: 0px 10px 0px 60px;
+    position: relative;
+}
+
+main .input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: solid 1px var(--border-color);
+    padding: 10px 20px;
+    color: var(--second-text);
+    margin-bottom: 5px;
+}
+
+main .input-group input::placeholder {
+    color: var(--primary-color);
+}
+
+main .input-group .flex {
+    position: absolute;
+    top: 25%;
+}
+
+
+main .input-group small {
+    color: var(--primary-color);
+}
+
+main .upload {
+    padding-left: 50px;
+    justify-content: space-between;
+}
+
+main .upload .flex:last-child {
+    justify-content: space-between;
+}
+
+main .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border : solid 1px var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+main .tweet-post {
+    padding: 6px 16px;
+    border-top: solid 1px var(--border-color);
+    border-bottom: solid 1px var(--border-color);
+    margin-top: 20px;
+}
+
+main .tweet-post > p {
+    color: var(--second-text);
+    padding-left: 65px;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+main .tweet-post .react {
+    width: 60%;
+    padding-left: 60px;
+    justify-content: space-between;
+}
+
+main .tweet-post .post-pic {
+    width: 90%;
+    padding-left: 60px;
+    overflow: hidden;
+}
+
+main .tweet-post .post-pic img {
+    max-width:100%;
+    border-radius: 10px;
+}
+/* aside */
+aside {
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    right: 102px;
+    width: 352px;
+    padding: 0 10px ;
+}
+
+
+aside .search {
+    position: relative;
+    margin: 10px 0;
+}
+
+aside .search img {
+    position: absolute;
+    top: 25%;
+    left: 3%;
+}
+
+aside .search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--aside-background);
+    border-radius: 24px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+aside section {
+    padding: 6px 16px;
+    background-color: var(--section);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+aside section  * {
+    margin-top: 10px;
+}
+
+aside section h1 {
+    font-weight: bold;
+}
+
+aside section div {
+    border-top: solid 1px var(--border-color);
+}
+
+aside section p  {
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width : 1000px) {
+    body {
+        padding: 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    aside {
+        display: none;
+    }
+}
